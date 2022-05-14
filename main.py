@@ -4,6 +4,7 @@ from turtle import back
 import pygame
 import sys
 
+
 pygame.init()
 
 # Creating display and font
@@ -30,7 +31,8 @@ kraken_rect = kraken.get_rect(topleft = (600, 320))
 black_pearl = pygame.transform.scale(pygame.image.load('graphics/ship/black_pearl.png').convert_alpha(), (200, 175))
 pearl_rect = black_pearl.get_rect(topleft = (0, 240))
 
-
+# for shooting
+bullet = 
 
 # The Game Loop
 while True:
