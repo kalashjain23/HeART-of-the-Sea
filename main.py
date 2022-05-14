@@ -30,6 +30,8 @@ kraken_rect = kraken.get_rect(topleft = (600, 320))
 black_pearl = pygame.transform.scale(pygame.image.load('graphics/ship/black_pearl.png').convert_alpha(), (200, 175))
 pearl_rect = black_pearl.get_rect(topleft = (0, 240))
 
+
+
 # The Game Loop
 while True:
     for event in pygame.event.get():
@@ -48,7 +50,15 @@ while True:
     screen.blit(kraken, (kraken_rect.x, 355))
     if kraken_rect.x < -60 : kraken_rect.x = 800
 
+    # check for collision 
+    if pearl_rect.colliderect(kraken_rect):
+        print("collision")
+        pygame.quit()
+        sys.exit()
+
     count_score()
 
     pygame.display.update()
     clock.tick(60)
+
+
