@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("HeART of the Sea")
 font = pygame.font.Font('font/Pixeltype.ttf', 50)
 clock = pygame.time.Clock()
-game_active = True
+game_active = False
 start_time = 0
 score = 0
 
