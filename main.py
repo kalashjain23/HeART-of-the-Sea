@@ -74,6 +74,7 @@ play_again_text_rect = play_again_text.get_rect(center = (400, 175))
 
 # Adding music
 bg_music = pygame.mixer.Sound('music/bg_music.mp3')
+bg_music.set_volume(0.25)
 bg_music.play()
 
 # Intro screen
@@ -111,7 +112,7 @@ while True:
                 game_active = True
                 start_time = int(pygame.time.get_ticks() / 1000)
 
-    if score == 10:
+    if score == 15:
         game_active = False
 
     if game_active:
@@ -132,7 +133,7 @@ while True:
         score = count_score()
 
     else:
-        if score < 10:
+        if score < 15:
             screen.fill((94, 129, 162))
             screen.blit(player, player_rect)
             screen.blit(game_name, game_name_rect)
